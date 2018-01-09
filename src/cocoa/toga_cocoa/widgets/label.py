@@ -29,7 +29,8 @@ class Label(Widget):
     def set_font(self, value):
         if value:
             self.native.font = value._impl.native
-
+        self.rehint()
+        
     def set_text(self, value):
         self.native.stringValue = self.interface._text
 
